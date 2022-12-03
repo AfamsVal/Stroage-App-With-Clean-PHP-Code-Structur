@@ -16,7 +16,10 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-                <h2 style='font-weight:bold;margin-bottom:15px;' class='font-2xl'> My Notes</h2>
+                <div style='display:flex;margin-bottom:15px;'>
+                    <h2 style='font-weight:bold;margin-right:100px;' class='font-2xl'> My Notes</h2>
+                    <a href='/create-note' class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">+ Create Note</a>
+                </div>
                 <ol>
                     <?php foreach ($notes as $note) : ?>
                         <a href='/note?id=<?= $note['id'] ?>' class='text-blue-500 hover:underline'>

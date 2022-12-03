@@ -8,13 +8,14 @@ $routes = [
     '/contact' => 'controllers/contact.php',
     '/notes' => 'controllers/notes.php',
     '/note' => 'controllers/note.php',
+    '/create-note' => 'controllers/note-create.php',
 ];
 
 function abort($code = 404)
 {
     http_response_code($code);
 
-    require 'view/{$code}.php';
+    require 'views/' . $code . '.view.php';
 
     die();
 }
