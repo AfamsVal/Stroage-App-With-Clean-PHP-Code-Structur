@@ -12,6 +12,11 @@ $heading = 'Create Note';
 ///////////////////////////////////
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $db->query('INSERT INTO notes(title,body,userId) VALUES(:title, :body, :userId)', [
+        'title' => $_POST['title'],
+        'body' => $_POST['body'],
+        'userId' => $_POST['userId'],
+    ]);
 }
 
 // $noteId = isset($_GET['id']) ? $_GET['id'] : null;

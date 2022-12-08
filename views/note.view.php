@@ -21,8 +21,8 @@
                     <a href='/notes'>
                         << Go Back </a>
                 </p>
-                <p class='my-4 font-bold'><?= $note['title'] ?></p>
-                <p class='my-4'><?= $note['body'] ?></p>
+                <p class='my-4 font-bold'><?= htmlspecialchars($note['title']) ?></p>
+                <p class='my-4'><?= htmlspecialchars($note['body']) ?></p>
                 <p class='my-4'><?= $note['createdAt'] ?></p>
             </div>
         </main>

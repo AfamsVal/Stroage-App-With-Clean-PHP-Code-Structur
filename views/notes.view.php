@@ -23,7 +23,7 @@
                 <ol>
                     <?php foreach ($notes as $note) : ?>
                         <a href='/note?id=<?= $note['id'] ?>' class='text-blue-500 hover:underline'>
-                            <li class='my-4'><?= $note['title'] ?></li>
+                            <li class='my-4'><?= htmlspecialchars($note['title']) ?></li>
                         </a>
                     <?php endforeach; ?>
                 </ol>
