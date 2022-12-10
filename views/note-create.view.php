@@ -23,11 +23,18 @@
                             <form method='POST'>
                                 <!-- Title input -->
                                 <div class="mb-6">
-                                    <input name='title' type="text" class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Enter Title" />
+                                    <input name='title' value='<?= isset($_POST['title']) ? $_POST['title'] : '' ?>' type="text" class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Enter Title" />
+                                    <?php if (isset($errors['title'])) : ?>
+                                        <small class="text-red-800"><?= $errors['title']; ?></small>
+                                    <?php endif; ?>
                                 </div>
 
                                 <div class="mb-6">
-                                    <textarea name='body' rows='5' placeholder='Description...' class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"></textarea>
+                                    <textarea name='body' rows='5' placeholder='Description...' class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"><?= $_POST['body'] ?? '' ?></textarea>
+
+                                    <?php if (isset($errors['body'])) : ?>
+                                        <small class="text-red-800"><?= $errors['body']; ?></small>
+                                    <?php endif; ?>
                                 </div>
 
                                 <input name='userId' value='1' type="hidden" />
