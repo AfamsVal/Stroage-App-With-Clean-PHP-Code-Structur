@@ -6,9 +6,9 @@ $routes = [
     '/' => 'controllers/home.php',
     '/about' => 'controllers/about.php',
     '/contact' => 'controllers/contact.php',
-    '/notes' => 'controllers/notes.php',
-    '/note' => 'controllers/note.php',
-    '/create-note' => 'controllers/note-create.php',
+    '/notes' => 'controllers/notes/notes.php',
+    '/note' => 'controllers/notes/note.php',
+    '/create-note' => 'controllers/notes/create.php',
 ];
 
 function abort($code = 404)

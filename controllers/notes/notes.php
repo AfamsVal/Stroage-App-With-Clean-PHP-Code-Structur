@@ -5,7 +5,7 @@ $config = require('config.php');
 
 $db = new Database($config['database']);
 
-$heading = 'Notes';
+$heading = 'All Notes';
 
 
 // DB BELOW////////////////////////
@@ -21,13 +21,10 @@ $notes = $db->query($query, ['uid' => $id])->fetchAll();
 
 // show($notes);
 
-require './views/notes.view.php';
-
-
-
-
-
-
+view('notes/index.view.php', [
+    'heading' => $heading,
+    'notes' => $notes
+]);
 
 
 //Method one: fetch single///

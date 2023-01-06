@@ -2,6 +2,7 @@
 
 $heading = 'Home';
 
+// view('index.view.php', $heading);
 
-
-require './views/index.view.php';
+//method 2:
+view('index.view.php', ['heading' => $heading]);

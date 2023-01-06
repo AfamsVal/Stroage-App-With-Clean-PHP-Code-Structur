@@ -25,5 +25,7 @@ $note = $db->query($query, [
 
 authorize($note['userId'] !== $userId, Response::FORBIDDEN);
 
-
-require './views/note.view.php';
+view('notes/note.view.php', [
+    'heading' => $heading,
+    'note' => $note,
+]);

@@ -1,21 +1,23 @@
 <?php
 
+require 'validator.php';
+
 
 $config = require('config.php');
 
 $db = new Database($config['database']);
 
-$heading = 'Create Note';
+$heading = 'Create New Note';
 
+$errors = [];
 
 // DB BELOW////////////////////////
 ///////////////////////////////////
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $errors = [];
 
-    if (strlen($_POST['title']) === 0) {
+    if (!Validator::string($_POST['title'])) {
         $errors['title'] = 'Title is required!';
     }
 
@@ -50,4 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // authorize($note['userId'] !== $userId, Response::FORBIDDEN);
 
 
-require './views/note-create.view.php';
+view('notes/create.view.php', [
+    'heading' => $heading,
+    'errors' => $errors
+]);
