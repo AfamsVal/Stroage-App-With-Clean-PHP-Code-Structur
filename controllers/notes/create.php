@@ -1,6 +1,9 @@
 <?php
 
-require 'validator.php';
+use Core\Database;
+use Core\Validator;
+
+require 'Validator.php';
 
 
 $config = require('config.php');

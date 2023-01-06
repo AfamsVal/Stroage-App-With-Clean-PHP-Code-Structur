@@ -1,5 +1,7 @@
 <?php
 
+use Core\Database;
+use Core\Response;
 
 $config = require('config.php');
 
