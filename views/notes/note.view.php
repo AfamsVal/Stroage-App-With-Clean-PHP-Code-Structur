@@ -25,6 +25,12 @@
                 <p class='my-4'><?= htmlspecialchars($note['body']) ?></p>
                 <p class='my-4'><?= $note['createdAt'] ?></p>
             </div>
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                <form method="POST">
+                    <input type="hidden" name='id' value="<?= $note['id'] ?>" />
+                    <button type='submit' class="bg-red-500 text-white py-3 px-8 rounded-md">Delete</button>
+                </form>
+            </div>
         </main>
     </div>
 

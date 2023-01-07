@@ -42,7 +42,7 @@ class Database
         $result = $this->statement->fetch();
 
         if (!$result) {
-            abort();
+            abort(Response::FORBIDDEN);
         }
 
         return $result;

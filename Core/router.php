@@ -15,7 +15,7 @@ function abort($code = 404)
 {
     http_response_code($code);
 
-    require 'views/' . $code . '.view.php';
+    view("{$code}.view.php");
 
     die();
 }
