@@ -3,7 +3,7 @@
 use Core\Database;
 use Core\Validator;
 
-require 'Validator.php';
+// require 'Validator.php';
 
 
 $config = require('config.php');
@@ -18,7 +18,6 @@ $errors = [];
 ///////////////////////////////////
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
 
     if (!Validator::string($_POST['title'])) {
         $errors['title'] = 'Title is required!';

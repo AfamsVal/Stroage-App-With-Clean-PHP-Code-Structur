@@ -37,12 +37,21 @@ class Database
         return $this->statement->fetch();
     }
 
+    public function abort($code = 403)
+    {
+        http_response_code($code);
+
+        view("{$code}.view.php");
+
+        die();
+    }
+
     public function findOrAbort()
     {
         $result = $this->statement->fetch();
 
         if (!$result) {
-            abort(Response::FORBIDDEN);
+            $this->abort(Response::FORBIDDEN);
         }
 
         return $result;

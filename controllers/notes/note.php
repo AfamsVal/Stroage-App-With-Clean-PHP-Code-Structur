@@ -10,7 +10,7 @@ $db = new Database($config['database']);
 $heading = 'Note';
 
 $noteId = isset($_GET['id']) ? $_GET['id'] : null;
-$userId = 12;
+$userId = 1;
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
