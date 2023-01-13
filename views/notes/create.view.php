@@ -20,7 +20,7 @@
                 <div class="px-6 text-gray-800">
                     <div>
                         <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                            <form method='POST'>
+                            <form method='POST' action='/create-note'>
                                 <!-- Title input -->
                                 <div class="mb-6">
                                     <input name='title' value='<?= isset($_POST['title']) ? $_POST['title'] : '' ?>' type="text" class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Enter Title" />

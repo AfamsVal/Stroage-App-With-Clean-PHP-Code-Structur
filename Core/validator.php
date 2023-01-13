@@ -6,7 +6,7 @@ class Validator
 {
     public static function string($str)
     {
-        return strlen(trim($str) === 0);
+        return strlen(trim($str)) === 0;
     }
 
     public static function validateEmail($email)

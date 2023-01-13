@@ -16,4 +16,7 @@ $router->get('/about', 'controllers/about.php');
 $router->get('/contact', 'controllers/contact.php');
 $router->get('/notes', 'controllers/notes/notes.php');
 $router->get('/note', 'controllers/notes/note.php');
+$router->get('/note', 'controllers/notes/note.php');
+$router->delete('/note', 'controllers/notes/delete_note.php');
 $router->get('/create-note', 'controllers/notes/create.php');
+$router->post('/create-note', 'controllers/notes/create-new.php');

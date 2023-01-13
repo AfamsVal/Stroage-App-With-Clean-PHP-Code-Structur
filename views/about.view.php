@@ -18,6 +18,12 @@
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
                 About Val
             </div>
+            <div class="mt-4 px-5 mx-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dicta non ut ratione consectetur sapiente porro. Quod repudiandae iure, ratione amet itaque sequi eligendi explicabo dolore quaerat, nobis error. Nobis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dicta non ut ratione consectetur sapiente porro. Quod repudiandae iure, ratione amet itaque sequi eligendi explicabo dolore quaerat, nobis error. Nobis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dicta non ut ratione consectetur sapiente porro. Quod repudiandae iure, ratione amet itaque sequi eligendi explicabo dolore quaerat, nobis error. Nobis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dicta non ut ratione consectetur sapiente porro. Quod repudiandae iure, ratione amet itaque sequi eligendi explicabo dolore quaerat, nobis error. Nobis?
+            </div>
         </main>
     </div>
 
