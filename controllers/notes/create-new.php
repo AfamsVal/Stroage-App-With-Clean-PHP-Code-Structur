@@ -2,13 +2,12 @@
 // DB BELOW////////////////////////
 ///////////////////////////////////
 
+use Core\App;
 use Core\Validator;
 use Core\Database;
 
 
-$config = require('config.php');
-
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $heading = 'Create New Note';
 
