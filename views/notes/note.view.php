@@ -16,10 +16,12 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-                <h2 style='font-weight:bold;margin-bottom:15px;color:brown;'> Note Details</h2>
                 <p>
                     <a href='/notes'>
                         << Go Back </a>
+                </p>
+                <p class="pb-6">
+                    <hr />
                 </p>
                 <p class='my-4 font-bold'><?= htmlspecialchars($note['title']) ?></p>
                 <p class='my-4'><?= htmlspecialchars($note['body']) ?></p>
@@ -30,6 +32,7 @@
                     <input type="hidden" name='_request_method' value="DELETE" />
                     <input type="hidden" name='id' value="<?= $note['id'] ?>" />
                     <button type='submit' class="bg-red-500 text-white py-3 px-8 rounded-md">Delete</button>
+                    <a href='edit-note?id=<?= $note['id'] ?>' class="bg-green-500 text-white py-3 px-8 rounded-md">Edit</a>
                 </form>
             </div>
         </main>

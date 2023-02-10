@@ -19,4 +19,6 @@ $router->get('/note', 'controllers/notes/note.php');
 $router->get('/note', 'controllers/notes/note.php');
 $router->delete('/note', 'controllers/notes/delete_note.php');
 $router->get('/create-note', 'controllers/notes/create.php');
-$router->post('/create-note', 'controllers/notes/create-new.php');
+$router->post('/create-note', 'controllers/notes/create-note.php');
+$router->patch('/note', 'controllers/notes/update-note.php');
+$router->get('/edit-note', 'controllers/notes/edit-note.php');

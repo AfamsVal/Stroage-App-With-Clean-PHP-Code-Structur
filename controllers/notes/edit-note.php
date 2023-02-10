@@ -1,12 +1,13 @@
 <?php
 
-use Core\App;
 use Core\Database;
 use Core\Response;
 
-$db = App::resolve(Database::class);
+$config = require('config.php');
+$db = new Database($config['database']);
 
-$heading = 'Note Details';
+$heading = 'Edit Note';
+
 
 $noteId = isset($_GET['id']) ? $_GET['id'] : null;
 $userId = 1;
@@ -23,7 +24,8 @@ $note = $db->query($query, [
 
 authorize($note['userId'] !== $userId, Response::FORBIDDEN);
 
-view('notes/note.view.php', [
+view('notes/edit.view.php', [
     'heading' => $heading,
-    'note' => $note,
+    'errors' => [],
+    'note' => $note
 ]);
