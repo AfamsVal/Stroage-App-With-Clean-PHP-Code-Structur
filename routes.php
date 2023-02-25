@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 // $routes = [
@@ -22,3 +22,5 @@ $router->get('/create-note', 'controllers/notes/create.php');
 $router->post('/create-note', 'controllers/notes/create-note.php');
 $router->patch('/note', 'controllers/notes/update-note.php');
 $router->get('/edit-note', 'controllers/notes/edit-note.php');
+$router->get('/register', 'controllers/register/create.php');
+$router->post('/register', 'controllers/register/store.php');
